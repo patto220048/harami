@@ -7,55 +7,22 @@
 
  </head>
  <body>
-  <h1 id='target'>JavaScript test </h1>
-  <img id='tanjiro_img' src="tanjiro.png" >
-  <img id='nezuko_img' src="nezuko.png">
-  <button onclick= " image()"> CLICK HERE!! </button>
-  <script>
+
+   <h1 id='target'>JavaScript test </h1>
+   <img id='gazo' src="tanjiro.png" onclick="image()">
+   <script>
+     let num = 0
      function image(){
-        let gazo= document.getElementById('tanjiro_img')
-        gazo.src = 'nezuko.png'
+        const files = ['tanjiro.png','nezuko1.png','zenistu.png']
+        num++
+        if (num>= files.length){
+            num = 0
+        }
+        let gazo= document.getElementById('gazo')
+        gazo.src = files[num]
      
      }
 
-
-
-  </script>
-  <script>
-    console.log("HELLO!!")
-    alert('こんにちは click "OK" to continue')
-    
-  </script>
-  <script>
-    const a = 3
-    const b = 5
-    const c = a+b
-    if (c>10){
-      console.log('larger than 10')
-    }
-    else{
-      console.log(' smaller than 10')
-    }
-  </script>
-  <script>
-    const mg= 'NiHAO'
-    let i = 0
-    while( i < 10){
-       console.log(mg)
-       i++
-    }
-  </script>
-  <script>
-    for ( let i = 0 ;i<20;i++){
-       if (i%5==0){
-           console.log('HELLO!')
-       
-       }
-       else {
-           console.log('CIAO!')
-       }
-    }
-  </script>
 
  </body>
 </html>
